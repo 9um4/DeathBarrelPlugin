@@ -1,0 +1,6 @@
+name: DeathBarrel
+version: '${project.version}'
+main: io.github.sweetenpotato.deathbarrel.Main
+api-version: 1.18
+libraries:
+  - org.jetbrains.kotlin:kotlin-stdlib:1.6.10
