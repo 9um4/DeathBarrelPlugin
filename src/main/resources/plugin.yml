@@ -2,5 +2,9 @@ name: DeathBarrel
 version: '${project.version}'
 main: io.github.sweetenpotato.deathbarrel.Main
 api-version: 1.18
+permissions:
+  deathBarrel.loot:
+    description: If you have this permission, your item put in the barrel where you died.
+    default: true
 libraries:
   - org.jetbrains.kotlin:kotlin-stdlib:1.6.10

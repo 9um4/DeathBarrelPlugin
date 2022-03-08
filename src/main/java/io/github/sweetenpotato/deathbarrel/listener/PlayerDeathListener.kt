@@ -9,6 +9,8 @@ class PlayerDeathListener : Listener {
     @EventHandler
     fun playerKilledEvent(event: PlayerDeathEvent) {
         val player = event.player
-        player.deathChest()
+        if (player.hasPermission("deathBarrel.loot")) {
+            player.deathChest()
+        }
     }
 }
