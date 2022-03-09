@@ -1,6 +1,6 @@
 package io.github.sweetenpotato.deathbarrel.listener
 
-import deathChest
+import io.github.sweetenpotato.deathbarrel.plugin.deathChest
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.entity.PlayerDeathEvent
