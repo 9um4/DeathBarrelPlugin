@@ -11,6 +11,7 @@ class PlayerDeathListener : Listener {
         val player = event.player
         if (player.hasPermission("deathBarrel.loot")) {
             player.deathChest()
+            event.drops.clear()
         }
     }
 }
