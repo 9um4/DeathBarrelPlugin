@@ -56,8 +56,9 @@ fun Player.deathChest() {
     }
     else return
     this.inventory.clear()
-
-    this.sendMessage(
-        "${ChatColor.WHITE}[${ChatColor.AQUA}Info${ChatColor.WHITE}] 플레이어 상자 위치 : world = " + deathBarrelLocation[0].world.toString() + "x = " + deathBarrelLocation[0].x.toString() + ", y = " + deathBarrelLocation[0].y.toString() + ", z = " + deathBarrelLocation[0].z.toString()
-    )
+    if (this.hasPermission("deathBarrel.getMessage")) {
+        this.sendMessage(
+            "${ChatColor.WHITE}[${ChatColor.AQUA}Info${ChatColor.WHITE}] 플레이어 상자 위치 : world = " + deathBarrelLocation[0].world.toString() + "x = " + deathBarrelLocation[0].x.toString() + ", y = " + deathBarrelLocation[0].y.toString() + ", z = " + deathBarrelLocation[0].z.toString()
+        )
+    }
 }

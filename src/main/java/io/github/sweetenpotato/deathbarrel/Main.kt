@@ -7,11 +7,11 @@ import org.bukkit.plugin.java.JavaPlugin
 class Main : JavaPlugin() {
     private val playerDeathListener = PlayerDeathListener()
     override fun onEnable() {
-        logger.info("Plugin Enabled")
+        logger.info("DeathBarrel Plugin v1.1 Enabled")
         Bukkit.getPluginManager().registerEvents(playerDeathListener, this)
     }
 
     override fun onDisable() {
-        println("Plugin Off")
+        logger.info("DeathBarrel Plugin v1.1 Disabled")
     }
 }

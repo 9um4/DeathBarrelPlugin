@@ -6,7 +6,7 @@
 
     <groupId>io.github.sweetenpotato</groupId>
     <artifactId>DeathBarrel</artifactId>
-    <version>1.0-Beta</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>DeathBarrel</name>
