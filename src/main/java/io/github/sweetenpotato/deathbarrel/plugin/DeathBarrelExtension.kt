@@ -7,6 +7,7 @@ import org.bukkit.block.Barrel
 import org.bukkit.entity.Player
 import org.bukkit.inventory.ItemStack
 import kotlin.math.ceil
+import kotlin.math.round
 
 fun Player.deathChest() {
     val deathBarrelLocation = ArrayList<Location>()
@@ -35,6 +36,8 @@ fun Player.deathChest() {
     else {
         rawLocation.y = ceil(rawLocation.y)
     }
+    rawLocation.x = round(rawLocation.x)
+    rawLocation.z = round(rawLocation.z)
 
     deathBarrelLocation.add(rawLocation)
 
@@ -60,7 +63,7 @@ fun Player.deathChest() {
     this.inventory.clear()
     if (this.hasPermission("deathBarrel.getMessage")) {
         this.sendMessage(
-            "${ChatColor.WHITE}[${ChatColor.AQUA}Info${ChatColor.WHITE}] 플레이어 상자 위치 : world = " + deathBarrelLocation[0].world.name + "x = " + deathBarrelLocation[0].x.toString() + ", y = " + deathBarrelLocation[0].y.toString() + ", z = " + deathBarrelLocation[0].z.toString()
+            "${ChatColor.WHITE}[${ChatColor.AQUA}Info${ChatColor.WHITE}] 플레이어 상자 위치 : world = " + deathBarrelLocation[0].world.name + ", x = " + deathBarrelLocation[0].x.toString() + ", y = " + deathBarrelLocation[0].y.toString() + ", z = " + deathBarrelLocation[0].z.toString()
         )
     }
 }
